@@ -3,7 +3,7 @@ import { getAPIContext } from '../utils/apiClient';
 
 test.describe('Auth API', () => {
   let data = {
-    username: 'admin',
+    username: 'admin1',
     password: 'password123'
   };
   test('успішна авторизація повертає токен', async () => {
@@ -20,7 +20,7 @@ test.describe('Auth API', () => {
     const body = await response.json();
     expect(body).toHaveProperty('token');
   });
-  
+
   test('неуспішна авторизація повертає помилку', async () => {
     const api = await getAPIContext();
     const wrongData = {
