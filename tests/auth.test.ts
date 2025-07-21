@@ -3,7 +3,7 @@ import { getAPIContext } from '../utils/apiClient';
 
 test.describe('Auth API', () => {
   let data = {
-    username: 'admin1',
+    username: 'admin',
     password: 'password123'
   };
   test('успішна авторизація повертає токен', async () => {
