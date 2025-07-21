@@ -2,10 +2,13 @@ name: Run API tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ "**" ]
   pull_request:
-    branches: [ main ]
-
+    branches: [ "**" ]
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 12 * * *' # Runs daily at 15:00 Kyiv time (UTC+3)
 jobs:
   test:
     runs-on: ubuntu-latest
